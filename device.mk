@@ -31,11 +31,13 @@ PRODUCT_PACKAGES += \
     bootctrl.xiaomi_sm8550.recovery \
     android.hardware.boot@1.2-impl-qti.recovery
 
-# API
-PRODUCT_SHIPPING_API_LEVEL  := 34
-PRODUCT_TARGET_VNDK_VERSION := 34
-BOARD_SHIPPING_API_LEVEL := 34
+# ========================================
+# Android Version & VNDK Configuration
+# ========================================
+BOARD_SHIPPING_API_LEVEL := 32
 
+# Shipping API level (Android 12.1 = API 32)
+PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
